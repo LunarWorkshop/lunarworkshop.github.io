@@ -1,140 +1,81 @@
-﻿---
+---
 title: Console
 ---
 
 # Console
 
-The Console tab is the first built-in Debug Tools tab. It is designed to turn frequently used console commands and `int32` console variables into a personal, saved widget board.
+The Console tab turns frequently used console objects into a personal, saved control board. It supports console commands, `Exec` commands, and bool, int, and float console variables.
 
 ---
 
-## Console Widget Builder
+## Find and Save a Console Object
 
-The builder searches two kinds of console objects from the current editor session:
+The **Console Widget Builder** searches objects registered in the current editor session. Search is case-insensitive and supports fuzzy matching; spaces in the search do not need to appear in the target name.
 
-- enabled console commands
-- enabled `int32` console variables
+Results include the name, available help text, and object type. The picker searches:
 
-Search behavior:
+- console commands
+- Blueprint/C++ `Exec` commands
+- Bool CVars
+- Int32 CVars
+- Float CVars
 
-- Case-insensitive
-- Sloppy matching is allowed
-- Spaces are ignored for matching, so a search such as `a b c` can match a target whose letters appear in order with any number of characters between them
+Select a result and click **Create Widget**. Commands and variables share one ordered saved list.
 
-The results list shows:
+<!-- Screenshot needed: Console Widget Builder search results showing a command, exec command, bool CVar, int CVar, and float CVar. -->
 
-- the console object name
-- the help text when available
-- whether the result is a `Console Command` or an `Int32 CVar`
+## Console and Exec Commands
 
-To create a saved widget:
+Click the main button to run a command. Open the gear menu to configure:
 
-1. Search for a console command or `int32` console variable
-2. Select it from the results list
-3. Click **Create Widget**
+- **Display label**
+- whether it can run in **Editor**, **PIE**, or both
+- whether PIE execution updates every host
+- a **PIE input** keyboard shortcut
+- raw or typed parameters when the selected command exposes them
 
-Saved widgets are stored in one mixed ordered list, so command widgets and `int32` console variable widgets can be interleaved freely.
+PIE-only controls display a subdued `[PIE]` prefix and remain disabled until PIE is running.
 
----
+For a normal console command, **Arguments** is raw text appended after the command name. Exec commands can expose typed Bool, Float, Int32, String, Name, Gameplay Tag, and Enum parameter controls.
 
-## Console Command Widgets
+Keyboard shortcuts run while the PIE viewport has keyboard focus. Debug Tools warns when a key is already used by another saved Debug Tools command or by an Enhanced Input Mapping Context.
 
-If you create a widget from a console command, Debug Tools creates a saved command widget.
+## Console Variables
 
-Command widgets support:
+Bool CVars use a checkbox. Int and float CVars use a numeric control that supports dragging and direct text entry. Changes update the live console variable immediately.
 
-- clicking the main button to run the command
-- dragging by the left handle to reorder
-- opening the gear menu for settings
-- clicking the trash button to remove the widget
+For an Int32 CVar, enable **Treat as boolean** to show a checkbox that writes zero or one.
 
-Duplicate saved widgets for the same command are not added.
+Numeric controls support optional minimum and maximum bounds. The range limits values written through the widget; adding a range does not rewrite an existing live value simply because it falls outside the range.
 
-### Command world selection
+If a saved console object is missing or has changed to an incompatible type, its control is disabled instead of being deleted.
 
-The gear menu for a command widget lets you choose where the command runs:
+## Save and Reset CVar Values
 
-- `Editor`
-- `PIE`
+The actions menu for a CVar includes:
 
-If a command widget is set to `PIE`:
+| Action | Result |
+|--------|--------|
+| Reset Value | Restore the CVar's registration default |
+| Save (Project) | Save the current value in a selected project configuration file |
+| Save (Local Override) | Save the current value for this user only |
+| Reset to saved | Restore the local override, then project value, then registration default |
+| Clear Saved | Remove saved project and local values for this CVar |
 
-- the button shows a subdued `[PIE]` prefix
-- the button is disabled while PIE is not running
-- the button re-enables automatically when PIE starts again
+When more than one project config file is suitable, **Save (Project)** asks which file to update. Source-controlled files are checked out through the project's configured source-control provider when possible.
 
----
+The panel's **Reset Console Variables and Debug Options** button resets all CVars in the saved Console list to their registration defaults. Debug Options are reset to their effective saved defaults at the same time.
 
-## Int32 Console Variable Widgets
+## Multiplayer Targeting
 
-If you create a widget from an `int32` console variable, Debug Tools creates a saved `int32` console variable widget.
+Commands and CVars can update every available checked PIE host. Disable **Update all hosts** to choose one host from the row's host picker. See [Multiplayer Targeting](/DebugTools/multiplayer-targeting).
 
-These widgets support:
+## Organize the List
 
-- dragging by the left handle to reorder
-- opening the gear menu for settings
-- clicking the trash button to remove the widget
+- Drag the `|||` handle to reorder a row.
+- Choose **Duplicate** to make an independently editable copy.
+- Choose **Delete** to remove a saved row.
 
-The main control uses Unreal's numeric slider style:
+The list and its settings are saved automatically. See [User Data and Persistence](/DebugTools/customization/user-data).
 
-- the console variable name appears on the left
-- the numeric slider fills the remaining width on the right and keeps a minimum width
-- you can drag left and right on the control
-- you can also type a number directly into the value field
-- changes update the live console variable immediately
-
-If the underlying console variable is missing or is no longer an `int32` variable, the widget disables itself instead of being removed automatically.
-
----
-
-## Int32 Widget Range Settings
-
-The gear menu for an `int32` console variable widget lets you configure:
-
-- `Min`
-- `Max`
-
-These values are saved with the widget.
-
-If `Min > Max`, Debug Tools normalizes the range by swapping them before saving.
-
-The slider write path clamps outgoing values into the saved range. The live console variable itself is not forcibly rewritten just because it currently sits outside the saved range.
-
-### Default range on creation
-
-When a new `int32` console variable widget is created:
-
-- default range is `0` to `1000`
-- if the live value is below `0`, range becomes `2 * value` to `0`
-- if the live value is above `1000`, range becomes `0` to `2 * value`
-
----
-
-## First-Run Default Widget
-
-If Debug Tools does not find an existing user save file yet, it seeds the saved console widget list with:
-
-- `debugtools.ExtraAsyncDelayMS`
-
-This only happens on first run when there is no existing Debug Tools save file. Existing save files are left unchanged.
-
----
-
-## Persistence
-
-Saved console widgets are stored automatically. There is no Save button.
-
-Debug Tools persists:
-
-- widget type
-- widget order
-- command world policy
-- `int32` widget min/max range
-
-For `int32` widgets, the display name and help text are always read live from the current console object instead of being stored redundantly in saved data.
-
-Your saved widget list is restored when you reopen the panel or restart the editor. Saved data lives in the project's `Saved/DebugTools/DebugToolsUserData.json` file.
-
-See [User Data and Persistence](/DebugTools/customization/user-data) for more detail.
-
-[? Back to tabs](/DebugTools/tabs)
+[Back to tabs](/DebugTools/tabs/) · [Back to home](/DebugTools/)

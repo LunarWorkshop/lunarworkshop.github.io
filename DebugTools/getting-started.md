@@ -1,61 +1,61 @@
-﻿---
+---
 title: Getting Started
 ---
 
 # Getting Started
 
-## What Debug Tools adds
+## Supported Versions
 
-Once enabled, Debug Tools adds a **Debug Tools** entry to the **Tools** section of Unreal Editor's **Tools** menu. Opening it creates a dockable panel similar to other built-in editor panels such as Gameplay Tag Manager or Class Viewer.
+Debug Tools 1.0 supports Unreal Engine 4.27 and Unreal Engine 5.0 through 5.8. The same major features are available throughout that range.
 
-The panel has two layers:
-
-- A shared plugin-owned frame that always exists
-- An optional project-owned root widget override that can fill the main content area
-
-The shared frame currently includes a built-in **Console** tab for searching and saving console commands.
+| Unreal version | Panel menu |
+|----------------|------------|
+| UE 4.27 | **Window -> Debug Tools** |
+| UE 5.0-5.8 | **Tools -> Debug Tools** |
 
 ---
 
-## Enable the plugin
+## Install and Enable the Plugin
 
-Open **Edit -> Plugins**, search for **Debug Tools**, and enable it. Restart the editor if Unreal prompts you to do so.
+Install the matching Debug Tools package for your engine version. A project plugin belongs at:
 
----
+`YourProject/Plugins/DebugTools`
 
-## Open the panel
+Open **Edit -> Plugins**, search for **Debug Tools**, enable it, and restart the editor when prompted.
 
-Open **Tools -> Debug Tools**.
+Debug Tools enables its standard Unreal dependencies automatically. The **Gameplay Abilities** plugin is optional; enable it only if you want the [Gameplay Ability System integration](/DebugTools/gameplay-ability-system).
 
-If no project override has been configured yet, the panel opens with the built-in placeholder root and the shared Console tab.
+## Open the Panel
 
----
+Open **Window -> Debug Tools** in UE 4.27 or **Tools -> Debug Tools** in UE 5.0 and later. The panel can be docked like other Unreal Editor tabs.
 
-## Use the Console tab
+The built-in panel contains five tabs: **Console**, **Debug Commands**, **Debug Options**, **Save Game**, and **Show Debug**. A project can also place its own Editor Utility Widget content above those tabs.
 
-The Console tab lets you:
+<!-- Screenshot needed: Complete Debug Tools panel in UE 5.8 with all five tab buttons visible. -->
 
-- Search all enabled console commands in the project
-- Use case-insensitive sloppy matching while searching
-- Save selected commands as clickable buttons
-- Reorder and remove saved buttons
-- Reuse those saved buttons across editor restarts
+## Create Your First Console Control
 
-See [Console](/DebugTools/tabs/console) for details.
+1. Open the **Console** tab.
+2. Search for a console command or variable, such as `debugtools.ExtraAsyncDelayMS`.
+3. Select the result and click **Create Widget**.
+4. Use the saved control directly from the panel.
 
----
+The saved control returns the next time you open the panel. Use its gear menu to change its label, execution target, range, shortcut, or saved default when those options apply.
 
-## Replace the root area with your own widget
+See [Console](/DebugTools/tabs/console) for the complete workflow.
 
-If you want a project-specific debug dashboard:
+## Configure Project Features
 
-1. Create a **User Widget Blueprint** subclass of `DebugToolsRootWidget`
-2. Open **Project Settings -> Plugins -> Debug Tools**
-3. Assign your widget to **Root Panel Widget Class**
+Open **Project Settings -> Plugins -> Debug Tools** to configure:
 
-The panel refreshes when that setting changes, and it also refreshes when the selected Blueprint recompiles.
+- a project-specific root panel widget
+- whether multiplayer controls are shown
+- save-game override definitions and custom struct widgets
+- project defaults for Debug Options
+- custom Show Debug views
 
-See [Root Widget Overrides](/DebugTools/customization/root-widget-overrides) for the full workflow.
+Settings intended for the whole project are written to project configuration. Personal saved controls and local overrides remain local to the user. See [User Data and Persistence](/DebugTools/customization/user-data).
 
-[← Back to home](/DebugTools/)
+<!-- Screenshot needed: Project Settings > Plugins > Debug Tools in UE 5.8 with all setting groups visible. -->
 
+[Back to home](/DebugTools/)

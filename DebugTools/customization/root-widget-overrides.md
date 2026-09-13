@@ -1,41 +1,36 @@
-﻿---
+---
 title: Root Widget Overrides
 ---
 
 # Root Widget Overrides
 
-Debug Tools supports a single project-selected root widget override.
+A Root Widget Override adds a project-specific Editor Utility Widget to the Debug Tools panel. Use it for a curated dashboard of the controls most important to your game.
 
-This lets a project replace the main content area of the Debug Tools panel with a custom **User Widget Blueprint** while still keeping the shared plugin-owned panel frame and built-in tabs.
-
----
-
-## How it works
-
-The plugin provides a base widget class named `DebugToolsRootWidget`.
-
-Create a **User Widget Blueprint** that subclasses `DebugToolsRootWidget`, then assign it in:
-
-**Project Settings -> Plugins -> Debug Tools**
-
-using **Root Panel Widget Class**.
-
-Once assigned:
-
-- Opening the Debug Tools panel uses your widget as the root content area
-- Changing the setting refreshes any open Debug Tools panels immediately
-- Recompiling the selected Blueprint also refreshes any open Debug Tools panels
+The custom content appears above the shared **Console**, **Debug Commands**, **Debug Options**, **Save Game**, and **Show Debug** tabs; it does not remove those tools.
 
 ---
 
-## If nothing is assigned
+## Create the Widget
 
-If no override is configured, Debug Tools falls back to the built-in placeholder root widget. That placeholder exists to keep the panel usable and to explain how to install a project override.
+1. Create an **Editor Utility Widget Blueprint**.
+2. Choose `DebugToolsRootWidget` as its parent class.
+3. Design the dashboard in the UMG Designer.
+4. Open **Project Settings -> Plugins -> Debug Tools**.
+5. Assign the Blueprint to **Root Panel Widget Class**.
+6. Open or return to the Debug Tools panel.
 
----
+The panel refreshes when the setting changes and when the selected Blueprint recompiles.
 
-## What stays shared
+<!-- Screenshot needed: UMG Designer for a DebugToolsRootWidget Blueprint containing several Debug Tools palette widgets. -->
 
-Even with a custom root widget, the shared Debug Tools frame remains in place. Built-in plugin tabs, such as **Console**, continue to appear as part of the shared panel shell.
+## Add Controls
 
-[← Back to customization](/DebugTools/customization)
+The UMG palette includes ready-made Debug Tools widgets for console commands, console variables, Debug Commands, Debug Options, and custom save-data structs. See [Dashboard Widgets](/DebugTools/customization/dashboard-widgets).
+
+Ordinary UMG layout widgets, text, images, and project-specific Editor Utility Widget logic can be used around them.
+
+## Fallback Behavior
+
+When no Root Panel Widget Class is assigned, Debug Tools displays a built-in message explaining how to create one. If the assigned class cannot be loaded or is not a valid `DebugToolsRootWidget` subclass, the panel falls back to that built-in content and displays a warning.
+
+[Back to customization](/DebugTools/customization/) · [Back to home](/DebugTools/)
