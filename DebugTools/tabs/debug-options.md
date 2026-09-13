@@ -55,7 +55,7 @@ The row actions distinguish team defaults from personal defaults:
 | Save (Local Override) | Save the current value as this user's default in the editor and PIE |
 | Clear Override | Remove the local override and reveal the project default |
 
-The panel's **Reset Console Variables and Debug Options** button resets every Debug Option to its effective saved default.
+The **Reset Console Variables and Debug Options** button in the Console tab resets every Debug Option to its effective saved default.
 
 ## Runtime and Multiplayer
 

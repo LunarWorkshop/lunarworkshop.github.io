@@ -29,9 +29,9 @@ Debug Tools enables its standard Unreal dependencies automatically. The **Gamepl
 
 Open **Window -> Debug Tools** in UE 4.27 or **Tools -> Debug Tools** in UE 5.0 and later. The panel can be docked like other Unreal Editor tabs.
 
-The built-in panel contains five tabs: **Console**, **Debug Commands**, **Debug Options**, **Save Game**, and **Show Debug**. A project can also place its own Editor Utility Widget content above those tabs.
+The panel contains six tabs: **Project**, **Console**, **Debug Commands**, **Debug Options**, **Save Game**, and **Show Debug**. The first tab hosts an Editor Utility Widget dashboard supplied by the project.
 
-<!-- Screenshot needed: Complete Debug Tools panel in UE 5.8 with all five tab buttons visible. -->
+<!-- Screenshot needed: Complete Debug Tools panel in UE 5.8 with Project followed by the five built-in tool tabs. -->
 
 ## Create Your First Console Control
 
@@ -48,7 +48,7 @@ See [Console](/DebugTools/tabs/console) for the complete workflow.
 
 Open **Project Settings -> Plugins -> Debug Tools** to configure:
 
-- a project-specific root panel widget
+- the project dashboard shown in the Project tab
 - whether multiplayer controls are shown
 - save-game override definitions and custom struct widgets
 - project defaults for Debug Options

@@ -10,8 +10,8 @@ This page tracks user-visible Debug Tools functionality.
 
 ### Editor Panel
 
-- Dockable Debug Tools panel with Console, Debug Commands, Debug Options, Save Game, and Show Debug tabs.
-- Optional project-owned Editor Utility Widget content above the built-in tabs.
+- Dockable Debug Tools panel with a project-authored Project tab followed by Console, Debug Commands, Debug Options, Save Game, and Show Debug.
+- Optional project-owned Editor Utility Widget content inside the Project tab.
 - One-click reset for saved console variables and Debug Options.
 
 ### Console and Commands

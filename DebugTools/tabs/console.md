@@ -64,7 +64,7 @@ The actions menu for a CVar includes:
 
 When more than one project config file is suitable, **Save (Project)** asks which file to update. Source-controlled files are checked out through the project's configured source-control provider when possible.
 
-The panel's **Reset Console Variables and Debug Options** button resets all CVars in the saved Console list to their registration defaults. Debug Options are reset to their effective saved defaults at the same time.
+The Console tab's **Reset Console Variables and Debug Options** button resets all CVars in the saved Console list to their registration defaults. Debug Options are reset to their effective saved defaults at the same time.
 
 ## Multiplayer Targeting
 

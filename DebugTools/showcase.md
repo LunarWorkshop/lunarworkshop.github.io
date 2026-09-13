@@ -6,7 +6,7 @@ title: Showcase
 
 This walkthrough combines the built-in panel with a small project-specific dashboard. The result gives designers one place to reproduce slow loads, tune gameplay, invoke test actions, prepare progression states, and inspect server/client behavior.
 
-<!-- Screenshot needed: Finished Debug Tools panel with a project dashboard above populated built-in tabs. -->
+<!-- Screenshot needed: Finished Debug Tools panel with the project-authored Project tab selected. -->
 
 ---
 
@@ -54,10 +54,10 @@ Run multiplayer PIE and open a host picker. Send a command to **Server**, inspec
 
 The same targeting model is shared by Console controls, Debug Commands, Debug Options, and custom Show Debug controls. See [Multiplayer Targeting](/DebugTools/multiplayer-targeting).
 
-## Put Frequent Controls at the Top
+## Put Frequent Controls in the Project Tab
 
-Create a `DebugToolsRootWidget` Editor Utility Widget Blueprint and place the most important project controls in it. The [Debug Tools UMG widgets](/DebugTools/customization/dashboard-widgets) provide the same command, CVar, Debug Command, Debug Option, and struct controls in a fixed project-authored layout.
+Create a `DebugToolsRootWidget` Editor Utility Widget Blueprint and place the most important project controls in it. The [Debug Tools UMG widgets](/DebugTools/customization/dashboard-widgets) provide the same command, CVar, Debug Command, Debug Option, and struct controls in a fixed project-authored layout inside the **Project** tab.
 
-The complete built-in tabs remain underneath for ad hoc work.
+The five built-in tool tabs remain beside it for ad hoc work.
 
 [Back to home](/DebugTools/)

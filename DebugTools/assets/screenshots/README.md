@@ -4,7 +4,7 @@ Screenshots are intentionally not captured or added yet. The documentation conta
 
 Capture these from Unreal Engine 5.8 when screenshot work is approved:
 
-1. Complete Debug Tools panel with all five built-in tab buttons visible.
+1. Complete Debug Tools panel with Project followed by all five built-in tool tabs.
 2. Project Settings -> Plugins -> Debug Tools with all setting groups visible.
 3. Console search results containing a command, exec command, Bool CVar, Int32 CVar, and Float CVar.
 4. Populated Debug Options tab demonstrating all six value types.
@@ -19,7 +19,8 @@ Capture these from Unreal Engine 5.8 when screenshot work is approved:
 13. Struct Widget Overrides project setting alongside the matching Editor Utility Widget Blueprint.
 14. Multiplayer host picker showing Listen Server and multiple clients.
 15. Gameplay Ability System view with Attributes, Effects, and Abilities categories.
-16. Finished showcase panel with a project dashboard and populated built-in tools.
+16. Finished showcase panel with the project-authored Project tab selected.
 17. Representative saved gameplay Debug Commands, including typed parameters.
+18. Project tab selected with a representative project-authored dashboard.
 
 Use native editor scaling, crop to the relevant UI, avoid project-confidential names/data, and write descriptive alt text when replacing each comment with its final image reference.

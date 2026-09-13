@@ -40,6 +40,7 @@ See the user-visible features included in each Debug Tools release.
 
 | Tab | Description |
 |-----|-------------|
+| [Project](/DebugTools/tabs/project) | A project-authored dashboard built as an Editor Utility Widget Blueprint |
 | [Console](/DebugTools/tabs/console) | Turn console commands, exec commands, and console variables into saved controls |
 | [Debug Commands](/DebugTools/tabs/debug-commands) | Run Blueprint-callable functions without building temporary UI or console commands |
 | [Debug Options](/DebugTools/tabs/debug-options) | Create gameplay-tagged values that designers can edit while testing |
