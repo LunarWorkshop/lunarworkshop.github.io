@@ -30,7 +30,9 @@ Project defaults are shared through project configuration. A tag without an expl
 
 The saved row uses an appropriate control for its type: a checkbox, numeric control, text field, name field, or gameplay-tag picker.
 
-<!-- Screenshot needed: Populated Debug Options tab showing all six value types. -->
+![Debug Options builder and a saved Float option](../assets/screenshots/debug-options.png)
+
+<!-- Replacement screenshot still needed: Populated Debug Options tab showing all six value types. -->
 
 ## Configure a Control
 

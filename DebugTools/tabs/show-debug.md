@@ -14,6 +14,8 @@ Start PIE, open **Show Debug**, and select a view from the dropdown. Selecting a
 
 The picker is disabled when PIE is not running.
 
+![Show Debug picker disabled before PIE starts](../assets/screenshots/show-debug-editor-state.png)
+
 Built-in choices include commonly available Unreal views such as AI, Animation, Bones, Camera, Collision, Game, Input, Net, and Physics. Views belonging to optional engine modules appear only when those modules are available.
 
 <!-- Screenshot needed: Show Debug dropdown open during PIE with built-in and GAS views visible. -->

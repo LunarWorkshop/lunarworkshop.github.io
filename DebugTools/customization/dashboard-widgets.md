@@ -8,7 +8,7 @@ Debug Tools supplies UMG controls for custom Editor Utility Widget dashboards. F
 
 These are editor dashboard controls. They are not runtime game UI widgets and are not intended for a Shipping HUD.
 
-<!-- Screenshot needed: UMG palette filtered to Debug Tools, showing all five available widget types. -->
+![UMG palette filtered to the five Debug Tools widget types](../assets/screenshots/umg-palette-widgets.png)
 
 ---
 

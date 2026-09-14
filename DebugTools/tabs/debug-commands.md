@@ -18,7 +18,7 @@ Debug Commands turn Blueprint-callable functions into saved buttons. They are us
 
 The function picker shows supported `BlueprintCallable` functions. When a source Blueprint or C++ class can be opened, the saved row provides a shortcut to its definition.
 
-<!-- Screenshot needed: Debug Command Builder with an Actor class and BlueprintCallable function selected. -->
+![Debug Command Builder with BP Test Actor and an Actor Blueprint-callable function selected](../assets/screenshots/debug-command-builder.png)
 
 ## Parameters and Results
 

@@ -22,7 +22,9 @@ Results include the name, available help text, and object type. The picker searc
 
 Select a result and click **Create Widget**. Commands and variables share one ordered saved list.
 
-<!-- Screenshot needed: Console Widget Builder search results showing a command, exec command, bool CVar, int CVar, and float CVar. -->
+![Console Widget Builder search results and representative saved Console controls](../assets/screenshots/console-builder.png)
+
+<!-- Replacement screenshot still needed: Console search results showing a command, exec command, Bool CVar, Int32 CVar, and Float CVar together. -->
 
 ## Console and Exec Commands
 

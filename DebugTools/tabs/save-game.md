@@ -19,6 +19,10 @@ Set **Metadata Save Slot Name** if the project needs a different slot for the en
 
 The current panel edits the first configured definition. Runtime loading can retain enabled state for configured definitions and selects one enabled override when asked to load.
 
+When no definition exists, the tab points directly to the setting that must be configured:
+
+![Save Game tab explaining that a Save Game Override must be configured in Project Settings](../assets/screenshots/save-game-empty-state.png)
+
 ## Prepare Save Data
 
 1. Open the **Save Game** tab.

@@ -21,7 +21,7 @@ The shared **Console**, **Debug Commands**, **Debug Options**, **Save Game**, an
 
 The panel refreshes when the setting changes and when the selected Blueprint recompiles.
 
-<!-- Screenshot needed: UMG Designer for a DebugToolsRootWidget Blueprint containing several Debug Tools palette widgets. -->
+![UMG Designer for a DebugToolsRootWidget dashboard containing Console Variable and Debug Option widgets](../assets/screenshots/root-widget-designer.png)
 
 ## Add Controls
 

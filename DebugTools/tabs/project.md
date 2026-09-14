@@ -6,7 +6,7 @@ title: Project
 
 The Project tab is the first tab in Debug Tools. It contains the Editor Utility Widget dashboard selected by the project, giving the team a curated home for game-specific debug controls.
 
-<!-- Screenshot needed: Project tab selected with a project-authored dashboard visible. -->
+![Project tab with a project-authored console variable and Debug Option dashboard](../assets/screenshots/project-dashboard.png)
 
 ---
 

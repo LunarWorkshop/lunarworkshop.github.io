@@ -31,7 +31,7 @@ Open **Window -> Debug Tools** in UE 4.27 or **Tools -> Debug Tools** in UE 5.0 
 
 The panel contains six tabs: **Project**, **Console**, **Debug Commands**, **Debug Options**, **Save Game**, and **Show Debug**. The first tab hosts an Editor Utility Widget dashboard supplied by the project.
 
-<!-- Screenshot needed: Complete Debug Tools panel in UE 5.8 with Project followed by the five built-in tool tabs. -->
+![Debug Tools panel with the Project dashboard followed by the five built-in tabs](assets/screenshots/complete-panel.png)
 
 ## Create Your First Console Control
 
@@ -56,6 +56,6 @@ Open **Project Settings -> Plugins -> Debug Tools** to configure:
 
 Settings intended for the whole project are written to project configuration. Personal saved controls and local overrides remain local to the user. See [User Data and Persistence](/DebugTools/customization/user-data).
 
-<!-- Screenshot needed: Project Settings > Plugins > Debug Tools in UE 5.8 with all setting groups visible. -->
+![Debug Tools settings filtered in Project Settings, showing the Panel and Save Game Override groups](assets/screenshots/project-settings.png)
 
 [Back to home](/DebugTools/)

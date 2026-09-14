@@ -6,7 +6,7 @@ title: Showcase
 
 This walkthrough combines the built-in panel with a small project-specific dashboard. The result gives designers one place to reproduce slow loads, tune gameplay, invoke test actions, prepare progression states, and inspect server/client behavior.
 
-<!-- Screenshot needed: Finished Debug Tools panel with the project-authored Project tab selected. -->
+![Finished Debug Tools panel with the project-authored Project tab selected](assets/screenshots/showcase-panel.png)
 
 ---
 
@@ -30,7 +30,9 @@ Use the [Debug Commands tab](/DebugTools/tabs/debug-commands) to select the Acto
 
 You can also assign PIE shortcut keys to the most frequent commands. Conflict warnings help you avoid keys already used by another Debug Tools command or Enhanced Input.
 
-<!-- Screenshot needed: Saved Debug Commands for a representative gameplay encounter, including one command with typed parameters. -->
+![Representative saved Actor Debug Commands](assets/screenshots/saved-debug-commands.png)
+
+<!-- Replacement screenshot still needed: Representative saved gameplay Debug Commands with a typed parameter expanded. -->
 
 ## Make Your Team A Cheats/Debug Panel
 
