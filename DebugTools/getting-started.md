@@ -15,15 +15,17 @@ Debug Tools 1.0 supports Unreal Engine 4.27 and Unreal Engine 5.0 through 5.8. T
 
 ---
 
-## Install and Enable the Plugin
+## Install the plugin
 
-Install the matching Debug Tools package for your engine version. A project plugin belongs at:
+Purchase Debug Tools on Fab and add it to your engine version from the Epic Games Launcher. The plugin comes with precompiled binaries so no source compilation is needed.
 
-`YourProject/Plugins/DebugTools`
+## Enable the plugin
 
-Open **Edit -> Plugins**, search for **Debug Tools**, enable it, and restart the editor when prompted.
+Open your project in Unreal Engine, then go to **Edit â†’ Plugins**. Search for **Debug Tools** and enable it. Restart the editor when prompted.
 
-Debug Tools enables its standard Unreal dependencies automatically. The **Gameplay Abilities** plugin is optional; enable it only if you want the [Gameplay Ability System integration](/DebugTools/gameplay-ability-system).
+## Enable dependencies
+
+If **Gameplay Abilities** is enabled, Debug Tools will automatically activate its GAS-specific functionality. Otherwise, Debug Tools still loads normally and all GAS-specific functions stay unavailable.
 
 ## Open the Panel
 
