@@ -2,6 +2,8 @@
 title: Showcase
 ---
 
+[Watch the showcase video on YouTube](https://www.youtube.com/watch?v=jEmpZznaJR8)
+
 # Showcase: A Gameplay Debug Dashboard
 
 This walkthrough combines the built-in panel with a small project-specific dashboard. The result gives designers one place to reproduce slow loads, tune gameplay, invoke test actions, prepare progression states, and inspect server/client behavior.
